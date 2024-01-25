@@ -1,0 +1,137 @@
+/*main-css for NFT Card Preview*/
+
+
+:root {
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+html {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+
+main {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nft_card {
+    max-width: 320px;
+
+    padding: 1em;
+    border-radius: 1em;
+    background-color: var(--Very-dark-blue-card-BG);
+
+
+
+}
+
+.nft_card_image {
+    text-align: center;
+    position: relative;
+}
+
+.nft_card_hover {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 98.5%;
+    border-radius: 1em;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.6s all;
+    background-color: hsla(178.1, 100%, 50%, 0.37);
+}
+
+
+.nft_card_image:hover .nft_card_hover {
+    opacity: 1;
+
+}
+
+.nft_card_image img {
+    border-radius: 1em;
+}
+
+.text-white {
+    margin: 20px 0px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: 0.6s all;
+    color: var(--White);
+}
+
+.text-white:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+.card_info p {
+    font-size: 0.9em;
+    color: var(--Softblue);
+    font-weight: 300;
+}
+
+.card_icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.card_icons span {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 0.9em;
+    align-items: center;
+}
+
+.hilights {
+    color: var(--Cyan);
+
+}
+
+.text-soft-blue {
+    color: var(--Softblue);
+}
+
+.card_profile span img {
+    border: 1px solid var(--White);
+    border-radius: 50px;
+}
+
+.card_profile {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.card_profile span {
+    font-size: 0.9em;
+    font-weight: 400;
+}
